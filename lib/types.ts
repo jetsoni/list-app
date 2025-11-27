@@ -1,6 +1,8 @@
+// /lib/types.ts
+
 export type ID = string;
 
-export type CategoryType = 'regular' | 'recipe';
+export type CategoryType = "regular" | "recipe";
 
 export type Category = {
   id: ID;
@@ -12,7 +14,7 @@ export type Category = {
 export type Item = {
   id: ID;
   name: string;
-  categoryIds: ID[];
+  categoryIds: ID[]; // An item can belong to multiple categories
 };
 
 export type SessionItem = {
@@ -23,6 +25,6 @@ export type SessionItem = {
 
 export type ShoppingSession = {
   id: ID;
-  startedAt: string; // ISO
+  startedAt: string; // ISO timestamp
   items: SessionItem[];
 };

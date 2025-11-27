@@ -2,7 +2,14 @@ import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 import type { Item } from "../../lib/types";
 import { uid } from "../../lib/utils";
 
-const initialState: Item[] = [];
+const initialState: Item[] = [
+  { id: "item1", name: "Apple", categoryIds: ["cat1"] },
+  { id: "item2", name: "Banana", categoryIds: ["cat1", "cat2"] },
+  { id: "item3", name: "Carrot", categoryIds: ["cat2"] },
+  { id: "item4", name: "Spinach", categoryIds: ["cat2"] },
+  { id: "item5", name: "Spaghetti", categoryIds: ["cat3"] },
+  { id: "item6", name: "Penne", categoryIds: ["cat3"] },
+];
 
 const itemsSlice = createSlice({
   name: "items",

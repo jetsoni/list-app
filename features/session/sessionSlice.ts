@@ -2,9 +2,15 @@ import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 import type { ShoppingSession, SessionItem } from "../../lib/types";
 import { uid, nowISO } from "../../lib/utils";
 
+// const initialState: ShoppingSession = {
+//   id: uid(),
+//   startedAt: nowISO(),
+//   items: [],
+// };
+
 const initialState: ShoppingSession = {
-  id: uid(),
-  startedAt: nowISO(),
+  id: "session1",
+  startedAt: new Date().toISOString(),
   items: [],
 };
 

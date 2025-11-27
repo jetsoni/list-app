@@ -2,7 +2,11 @@ import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 import type { Category } from "../../lib/types";
 import { uid } from "../../lib/utils";
 
-const initialState: Category[] = [];
+const initialState: Category[] = [
+  { id: "cat1", name: "Fruits", type: "regular" },
+  { id: "cat2", name: "Vegetables", type: "regular" },
+  { id: "cat3", name: "Pasta Recipes", type: "recipe", recipeUrl: "https://example.com/pasta" },
+];
 
 const categoriesSlice = createSlice({
   name: "categories",
